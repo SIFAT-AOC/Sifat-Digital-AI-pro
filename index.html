@@ -139,17 +139,17 @@ const SITE = {
     text: "The stack behind fast, high-converting Shopify stores.",
     items: [
       { name: "Shopify", slug: "shopify", color: "7AB55C" },
-      { name: "Liquid", slug: "liquid", color: "7AB55C" },
+      { name: "Coding", slug: "codecrafters", color: "7AB55C" },
       { name: "Figma", slug: "figma", color: "F24E1E" },
       { name: "JavaScript", slug: "javascript", color: "F7DF1E" },
-      { name: "HTML5", slug: "html5", color: "E34F26" },
-      { name: "CSS", slug: "css", color: "1572B6" },
+      { name: "Github", slug: "github", color: "E34F26" },
+      { name: "Seo", slug: "searxng", color: "1572B6" },
       { name: "Google Analytics", slug: "googleanalytics", color: "E37400" },
       { name: "MCP", slug: "modelcontextprotocol", color: "246FDB" },
       { name: "Search Console", slug: "googlesearchconsole", color: "458CF5" },
       { name: "Shopify Plus", slug: "gotomeeting", color: "000000" },
       { name: "CRO", slug: "crowdsource", color: "31A8FF" },
-      { name: "AI UX Design ", slug: "gimp", color: "9999FF" }
+      { name: "AI UI/UX Design ", slug: "gimp", color: "9999FF" }
     ]
   },
 
@@ -410,7 +410,7 @@ if(S.demoMode)$('demo').innerHTML='<div class="demo">Demo content. Replace it wi
 $('logo').innerHTML='<b>'+ic('shopping-bag')+'</b>'+S.name;$('hcta').innerHTML=cta('Free AI UI design');$('sbc').innerHTML=cta(S.hero.btn1);
 var H=S.hero,w0=S.works[H.showcase]||S.works[0];
 $('hero').innerHTML='<div><span class="pill">'+H.pill+'</span><h1>'+H.headline.replace(/\{(.+?)\}/,'<span class="gt">$1</span>')+'</h1><p class="lead">'+H.sub+'</p><div class="cta"><a class="btn" href="#contact">'+cta(H.btn1)+'</a><a class="btn o" href="#work">'+H.btn2+'</a></div><div class="chk">'+H.points.map(function(p){return '<span>'+ic('check-circle-2')+p+'</span>'}).join('')+'</div></div>'+
-(w0?'<div class="mock"><div class="frame"><div class="bar"><i></i><i></i><i></i><span>yourstore.myshopify.com</span></div><div class="shot" data-img="'+qa(w0.img)+'"></div></div><span class="chip c1"><i>'+ic('trending-up')+'</i>Built to lift add-to-cart</span><span class="chip c2"><i>'+ic('zap')+'</i>Fast on mobile</span></div>':'');
+(w0?'<div class="mock"><div class="frame"><div class="bar"><i></i><i></i><i></i><span>https://aureveskincare.com/</span></div><div class="shot" data-img="'+qa(w0.img)+'"></div></div><span class="chip c1"><i>'+ic('trending-up')+'</i>Built to lift add-to-cart</span><span class="chip c2"><i>'+ic('zap')+'</i>Fast on mobile</span></div>':'');
 $('stats').innerHTML=S.stats.map(function(s){return '<div class="glass"><span class="ic">'+ic(s.icon)+'</span><b>'+s.title+'</b><span>'+s.text+'</span></div>'}).join('');
 var K=S.skills;$('skills').innerHTML=hd('Skillset',K.title,K.text)+'<div class="sk">'+K.items.map(function(k){return '<div class="glass"><span class="si"><img src="https://cdn.simpleicons.org/'+k.slug+'/'+k.color+'" alt="" loading="lazy" onerror="this.outerHTML=\'<b>'+k.name[0]+'</b>\'"></span>'+k.name+'</div>'}).join('')+'</div></div>';
 var V=S.services;$('services').innerHTML=hd('Services',V.title,V.text)+'<div class="tabs" role="tablist">'+V.items.map(function(s,i){return '<button class="tab'+(i?'':' on')+'" role="tab">'+s.tab+'</button>'}).join('')+'</div>'+V.items.map(function(s,i){return '<div class="glass pane'+(i?'':' on')+'"><div>'+(s.tag?'<span class="tag">'+s.tag+'</span>':'')+'<h3>'+s.title+'</h3><p>'+s.text+'</p><ul class="pts">'+s.points.map(function(p){return '<li>'+ic('check')+p+'</li>'}).join('')+'</ul></div><div class="vis">'+ic(s.icon)+'</div></div>'}).join('')+'</div>';
