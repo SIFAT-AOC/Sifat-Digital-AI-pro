@@ -3,7 +3,7 @@
 <meta name="description" content="Shopify store design and build with clear fixed pricing. Dropshipping packages include basic SEO and product graphics. Get a free AI UI design for your homepage first.">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--g1:#95bf47;--g2:#5e8e3e;--g3:#008060;--ink:#0b2a22;--mut:#55665f;--line:#e4eee6;--tint:#f2f8ec;--grad:linear-gradient(135deg,#95bf47 0%,#5e8e3e 55%,#008060 100%)}
+:root{--ss:8s;--g1:#95bf47;--g2:#5e8e3e;--g3:#008060;--ink:#0b2a22;--mut:#55665f;--line:#e4eee6;--tint:#f2f8ec;--grad:linear-gradient(135deg,#95bf47 0%,#5e8e3e 55%,#008060 100%)}
 *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:90px}
 body{font-family:'Poppins',sans-serif;color:var(--ink);background:#fff;line-height:1.6;overflow-x:hidden}
 h1,h2,h3,.fo{font-family:'Outfit',sans-serif}a{color:inherit;text-decoration:none}
@@ -26,8 +26,9 @@ h1{font-size:clamp(34px,5vw,58px);line-height:1.08;letter-spacing:-1.2px;margin:
 .chk{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;font-weight:500}.chk span{display:flex;gap:7px;align-items:center}.chk .lucide{color:var(--g2);width:16px}
 .mock{position:relative}.frame{border-radius:18px;background:#fff;border:1px solid var(--line);overflow:hidden}.mock .frame{box-shadow:0 40px 70px -40px rgba(0,76,63,.55),0 0 0 8px rgba(255,255,255,.7)}
 .bar{height:32px;display:flex;align-items:center;gap:6px;padding:0 14px;background:#f6faf2;border-bottom:1px solid var(--line)}.bar i{width:9px;height:9px;border-radius:50%;background:#cfe0bd}.bar span{margin-left:10px;font-size:11px;color:var(--mut);background:#fff;border-radius:20px;padding:1px 14px;border:1px solid var(--line)}
-.shot{aspect-ratio:16/11;background-size:100% auto;background-position:50% 0;background-repeat:no-repeat;animation:ss 28s ease-in-out infinite alternate;animation-play-state:paused}
+.shot{aspect-ratio:16/11;background-size:100% auto;background-position:50% 0;background-repeat:no-repeat;animation:ss var(--ss) ease-in-out infinite alternate;animation-play-state:paused}
 .shot.play{animation-play-state:running}
+.shot.noimg{background:var(--grad);display:grid;place-items:center;animation:none}.shot.noimg:after{content:"Preview coming soon";color:#fff;font:600 14px 'Outfit';opacity:.9}
 @keyframes ss{0%,6%{background-position:50% 0}94%,100%{background-position:50% 100%}}
 .chip{position:absolute;display:flex;gap:9px;align-items:center;padding:9px 15px 9px 10px;border-radius:40px;background:#fff;border:1px solid var(--line);box-shadow:0 18px 30px -16px rgba(0,76,63,.5);font-size:12.5px;font-weight:600;animation:fl 5s ease-in-out infinite alternate}
 .chip i{width:26px;height:26px;border-radius:50%;background:var(--grad);display:grid;place-items:center;color:#fff}.chip .lucide{width:14px}.c1{left:-22px;bottom:50px}.c2{right:-10px;top:-18px;animation-delay:-2s}@keyframes fl{to{transform:translateY(-9px)}}
@@ -90,7 +91,7 @@ footer{text-align:center;padding:36px 18px 100px;font-size:13px;color:var(--mut)
 @media(max-width:900px){.mb{display:grid}.hero,.pane,.ct{grid-template-columns:1fr}.hero{padding-top:110px}.st{grid-template-columns:1fr 1fr}.pr{grid-template-columns:1fr 1fr}.step:after{display:none}.cr{border-left:1px solid var(--line);border-top:0}.c1{left:6px}.c2{right:6px}.wg,.rv,.eg{grid-template-columns:1fr}.pg{grid-template-columns:1fr 1fr}.sk{grid-template-columns:repeat(3,1fr)}.hb .btn{display:none}.sb{display:block}
 nav{position:absolute;left:0;right:0;top:calc(100% + 8px);flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:24px;padding:10px;box-shadow:0 30px 50px -20px rgba(0,76,63,.4);opacity:0;visibility:hidden;transform:translateY(-8px);transition:.25s}header.open nav{opacity:1;visibility:visible;transform:none}nav a{padding:14px 18px;font-size:15px}}
 @media(max-width:560px){.pg{grid-template-columns:1fr}.pcu{padding:20px}.pcu .btn{width:100%;justify-content:space-between}section{padding:50px 0}.pr{grid-template-columns:1fr}.pane{padding:22px}form{grid-template-columns:1fr}.cta .btn{width:100%;justify-content:space-between}.tabs{border-radius:24px;width:100%}.tab{padding:10px 14px;font-size:13px;flex:1}.cl,.cr{padding:26px 18px}.chip{display:none}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media(prefers-reduced-motion:reduce){*:not(.shot){animation:none!important;transition:none!important}}
 </style></head><body><div class="glow"></div><div id="demo"></div>
 <header id="hd"><div class="hb"><a class="logo" href="#top" id="logo"></a><nav id="nav"><a href="#skills">Skills</a><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#work">Work</a><a href="#education">Education</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
 <div class="hr"><a class="btn" href="#contact" id="hcta"></a><button class="mb" id="mb" aria-label="Menu" aria-expanded="false"><i data-lucide="menu"></i></button></div></div></header>
@@ -118,7 +119,7 @@ const SITE = {
   hero: {
     pill: "Shopify developer",
     headline: "Shopify stores that {convert,} with product visuals that sell.",
-    sub: "I’m Sifat. I build fast Shopify stores at clear, fixed prices. Dropshipping packages come with basic SEO and product graphics. Send me your store or idea and I’ll make a free AI UI design of your homepage first.",
+    sub: "I’m Sifat. I build fast Shopify stores at clear, affordable prices. Dropshipping packages come with basic SEO and product graphics. Send me your store or idea and I’ll make a free AI UI design of your homepage first.",
     btn1: "Get my free AI UI design",
     btn2: "See my work",
     points: ["Free AI UI design before you pay", "Fixed prices from $149", "SEO and graphics in Dropshipping packages"],
@@ -183,7 +184,7 @@ const SITE = {
         points: ["5 products added", "4 pages", "Graphics for your products", "Basic SEO", "Free AI UI design", "Mobile-first, cart and checkout setup"] }
     ],
     customTitle: "Need something custom?",
-    customText: "Different page count, more products or extra features? Send me a message with what you need and I will quote it.",
+    customText: "Different page count,more products or extra features? Send me a message with what you need and I will quote it.",
     note: "Prices in USD. SEO and graphics are included in Dropshipping packages only."
   },
 
@@ -192,17 +193,18 @@ const SITE = {
     text: "The technical foundation behind my work.",
     items: [
       { icon: "graduation-cap", degree: "Diploma in Computer Science and Technology", school: "Brahmanbaria Polytechnic Institute", year: "2024",
-        points: ["Major in Computer Technology", "CGPA 3.27", "Class Representative, 2 times"] },
+        points: ["Major in Computer Technology", "CGPA 3.27"] },
       { icon: "book-open", degree: "Secondary School Certificate (SSC)", school: "Panchgoan High School",
         points: ["Science background", "GPA 4.28"] },
       { icon: "award", degree: "President’s Scout Award", school: "Bangladesh Scouts", year: "Oct 2020",
+        points: ["Awarded by Bangladesh Scouts"] },
+      { icon: "shopping-bag", degree: "Shopify Partner", school: "Shopify Academy", year: "Oct 2021",
         points: ["Awarded by Bangladesh Scouts"] }
     ]
   },
 
   /* WORK: type = filter tab. problem/result = short trust lines. img = screenshot (full page) */
-  
-  works: [
+    works: [
     {
       "title": "Aureve Skin Care",
       "type": "Store build",
@@ -388,15 +390,27 @@ const SITE = {
 </script>
 <script src="https://cdn.jsdelivr.net/npm/lucide@0.460.0/dist/umd/lucide.min.js"></script>
 <script>
+
+/* ---- image helper: works with local paths (spaces, accents, leading /, ./, backslashes) and full URLs ---- */
+function cands(u){u=String(u||'').trim();if(!u)return[];
+ if(/^(https?:)?\/\/|^data:|^blob:/i.test(u))return[u];
+ var p=u.replace(/\\/g,'/');try{p=decodeURI(p)}catch(e){}
+ p=p.replace(/^(\.?\/)+/,'');var out=[];
+ ['NFC','NFD'].forEach(function(f){var q=p.normalize?p.normalize(f):p;[q,'/'+q].forEach(function(x){var e=encodeURI(x);if(out.indexOf(e)<0)out.push(e)})});return out}
+function qa(u){return String(u||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;')}
+function loadShot(el){var c=cands(el.getAttribute('data-img')),i=0;
+ (function next(){if(i>=c.length){el.classList.add('noimg');if(window.console)console.warn('Image not found:',el.getAttribute('data-img'));return}
+  var u=c[i++],im=new Image();im.onload=function(){el.style.backgroundImage='url("'+u.replace(/"/g,'%22').replace(/\\/g,'%5C')+'")'};im.onerror=next;im.src=u})()}
+function ph(i){var n=(i.alt||'').trim();i.outerHTML='<span>'+(n?n.split(/\s+/).map(function(x){return x[0]}).slice(0,2).join('').toUpperCase():'')+'</span>'}
 var S=SITE,$=function(i){return document.getElementById(i)},ic=function(n){return '<i data-lucide="'+n+'"></i>'};
 var cta=function(t){return t+'<i>'+ic('arrow-right')+'</i>'};
-function av(p,n){return '<span class="av">'+(p?'<img src="'+p+'" alt="'+n+'" loading="lazy">':'<span>'+n.trim().split(/\s+/).map(function(x){return x[0]}).slice(0,2).join('').toUpperCase()+'</span>')+'</span>'}
+function av(p,n){return '<span class="av">'+(p?'<img src="'+(cands(p)[0]||'')+'" alt="'+qa(n)+'" loading="lazy" onerror="ph(this)">':'<span>'+n.trim().split(/\s+/).map(function(x){return x[0]}).slice(0,2).join('').toUpperCase()+'</span>')+'</span>'}
 function hd(p,t,x){return '<div class="w" style="padding:0"><div class="hd"><span class="pill">'+p+'</span><h2>'+t+'</h2>'+(x?'<p>'+x+'</p>':'')+'</div>'}
 if(S.demoMode)$('demo').innerHTML='<div class="demo">Demo content. Replace it with real work and reviews in content.js</div>';
 $('logo').innerHTML='<b>'+ic('shopping-bag')+'</b>'+S.name;$('hcta').innerHTML=cta('Free AI UI design');$('sbc').innerHTML=cta(S.hero.btn1);
 var H=S.hero,w0=S.works[H.showcase]||S.works[0];
 $('hero').innerHTML='<div><span class="pill">'+H.pill+'</span><h1>'+H.headline.replace(/\{(.+?)\}/,'<span class="gt">$1</span>')+'</h1><p class="lead">'+H.sub+'</p><div class="cta"><a class="btn" href="#contact">'+cta(H.btn1)+'</a><a class="btn o" href="#work">'+H.btn2+'</a></div><div class="chk">'+H.points.map(function(p){return '<span>'+ic('check-circle-2')+p+'</span>'}).join('')+'</div></div>'+
-(w0?'<div class="mock"><div class="frame"><div class="bar"><i></i><i></i><i></i><span>yourstore.myshopify.com</span></div><div class="shot" style="background-image:url('+w0.img+')"></div></div><span class="chip c1"><i>'+ic('trending-up')+'</i>Built to lift add-to-cart</span><span class="chip c2"><i>'+ic('zap')+'</i>Fast on mobile</span></div>':'');
+(w0?'<div class="mock"><div class="frame"><div class="bar"><i></i><i></i><i></i><span>yourstore.myshopify.com</span></div><div class="shot" data-img="'+qa(w0.img)+'"></div></div><span class="chip c1"><i>'+ic('trending-up')+'</i>Built to lift add-to-cart</span><span class="chip c2"><i>'+ic('zap')+'</i>Fast on mobile</span></div>':'');
 $('stats').innerHTML=S.stats.map(function(s){return '<div class="glass"><span class="ic">'+ic(s.icon)+'</span><b>'+s.title+'</b><span>'+s.text+'</span></div>'}).join('');
 var K=S.skills;$('skills').innerHTML=hd('Skillset',K.title,K.text)+'<div class="sk">'+K.items.map(function(k){return '<div class="glass"><span class="si"><img src="https://cdn.simpleicons.org/'+k.slug+'/'+k.color+'" alt="" loading="lazy" onerror="this.outerHTML=\'<b>'+k.name[0]+'</b>\'"></span>'+k.name+'</div>'}).join('')+'</div></div>';
 var V=S.services;$('services').innerHTML=hd('Services',V.title,V.text)+'<div class="tabs" role="tablist">'+V.items.map(function(s,i){return '<button class="tab'+(i?'':' on')+'" role="tab">'+s.tab+'</button>'}).join('')+'</div>'+V.items.map(function(s,i){return '<div class="glass pane'+(i?'':' on')+'"><div>'+(s.tag?'<span class="tag">'+s.tag+'</span>':'')+'<h3>'+s.title+'</h3><p>'+s.text+'</p><ul class="pts">'+s.points.map(function(p){return '<li>'+ic('check')+p+'</li>'}).join('')+'</ul></div><div class="vis">'+ic(s.icon)+'</div></div>'}).join('')+'</div>';
@@ -404,7 +418,7 @@ var P=S.pricing,wl=function(t){return S.whatsapp?'https://wa.me/'+S.whatsapp+'?t
 $('pricing').innerHTML=hd('Pricing',P.title,P.text)+'<div class="pg">'+P.plans.map(function(p){return '<div class="glass pc'+(p.popular?' pop':'')+'">'+(p.popular?'<span class="pb">'+p.popular+'</span>':'')+'<div class="pn">'+p.name+'</div><div class="pp"><sup>$</sup>'+p.price+'<small>'+p.sub+'</small></div><p class="pd">'+p.desc+'</p><ul class="pts">'+p.points.map(function(x){return '<li>'+ic('check')+x+'</li>'}).join('')+(p.no||[]).map(function(x){return '<li class="no">'+ic('x')+x+' not included</li>'}).join('')+'</ul><a class="btn'+(p.popular?'':' o')+'" href="'+wl('Hi Sifat, I am interested in the '+p.name+' plan ($'+p.price+').')+'" target="_blank" rel="noopener">'+(p.popular?cta('Choose this plan'):'Choose this plan')+'</a></div>'}).join('')+'</div><div class="glass pcu"><div><b>'+P.customTitle+'</b><p>'+P.customText+'</p></div><a class="btn" href="'+wl('Hi Sifat, I need a custom Shopify project.')+'" target="_blank" rel="noopener">'+cta('Message me')+'</a></div><p class="pnote">'+P.note+'</p></div>';
 var E=S.education;$('education').innerHTML=hd('Education',E.title,E.text)+'<div class="eg">'+E.items.map(function(e){return '<div class="glass ed"><span class="ic">'+ic(e.icon)+'</span><div>'+(e.year?'<span class="yr">'+e.year+'</span>':'')+'<h3>'+e.degree+'</h3><div class="sc">'+e.school+'</div><ul class="pts">'+e.points.map(function(x){return '<li>'+ic('check')+x+'</li>'}).join('')+'</ul></div></div>'}).join('')+'</div></div>';
 var ty=['All'];S.works.forEach(function(w){if(ty.indexOf(w.type)<0)ty.push(w.type)});
-$('work').innerHTML=hd('Work','Stores I have <span class="gt">built</span>','Each preview scrolls slowly on its own. Every card shows the problem, the fix and the result.')+'<div class="flt">'+ty.map(function(t,i){return '<button class="'+(i?'':'on')+'">'+t+'</button>'}).join('')+'</div><div class="wg">'+S.works.map(function(w){return '<div class="glass work" data-t="'+w.type+'"><div class="frame fw"><span class="rb">'+w.result+'</span><div class="bar"><i></i><i></i><i></i></div><div class="shot" style="background-image:url('+w.img+')"></div></div><h3>'+w.title+'</h3><div class="pf"><div><b>Problem</b>'+w.problem+'</div><div><b>Fix</b>'+w.fix+'</div></div><div class="tg">'+w.tags.map(function(t){return '<span>'+t+'</span>'}).join('')+'<a href="'+w.url+'" target="_blank" rel="noopener">View live '+ic('arrow-up-right')+'</a></div></div>'}).join('')+'</div></div>';
+$('work').innerHTML=hd('Work','Stores I have <span class="gt">built</span>','Each preview scrolls slowly on its own. Every card shows the problem, the fix and the result.')+'<div class="flt">'+ty.map(function(t,i){return '<button class="'+(i?'':'on')+'">'+t+'</button>'}).join('')+'</div><div class="wg">'+S.works.map(function(w){return '<div class="glass work" data-t="'+w.type+'"><div class="frame fw"><span class="rb">'+w.result+'</span><div class="bar"><i></i><i></i><i></i></div><div class="shot" data-img="'+qa(w.img)+'"></div></div><h3>'+w.title+'</h3><div class="pf"><div><b>Problem</b>'+w.problem+'</div><div><b>Fix</b>'+w.fix+'</div></div><div class="tg">'+w.tags.map(function(t){return '<span>'+t+'</span>'}).join('')+'<a href="'+w.url+'" target="_blank" rel="noopener">View live '+ic('arrow-up-right')+'</a></div></div>'}).join('')+'</div></div>';
 if(S.reviews.length)$('reviews').innerHTML=hd('Reviews','What clients <span class="gt">say</span>','')+'<div class="rv">'+S.reviews.map(function(r){return '<div class="glass"><div class="stars" aria-label="'+r.stars+' stars">'+'★'.repeat(r.stars)+'</div><p>“'+r.quote+'”</p><div class="who">'+av(r.photo,r.name)+'<div><b>'+r.name+'</b><small>'+r.role+'</small></div></div></div>'}).join('')+'</div></div>';else $('reviews').remove();
 $('process').innerHTML=hd('Process','How it <span class="gt">works</span>','')+'<div class="pr">'+S.process.map(function(p,i){return '<div class="glass step"><span class="n">'+(i+1)+'</span><span class="ic">'+ic(p.icon)+'</span><h3>'+p.title+'</h3><p>'+p.text+'</p></div>'}).join('')+'</div></div>';
 $('faq').innerHTML=hd('FAQ','Questions','')+'<div class="faq">'+S.faq.map(function(f,i){return '<details class="glass"'+(i?'':' open')+'><summary>'+f.q+'</summary><p>'+f.a+'</p></details>'}).join('')+'</div></div>';
@@ -417,6 +431,7 @@ document.querySelectorAll('.flt button').forEach(function(b,i,a){b.onclick=funct
 var hh=$('hd');$('mb').onclick=function(){var o=hh.classList.toggle('open');this.setAttribute('aria-expanded',o);this.innerHTML=ic(o?'x':'menu');try{lucide.createIcons()}catch(e){}};
 $('nav').onclick=function(){hh.classList.remove('open')};
 $('f').onsubmit=function(e){e.preventDefault();var d=new FormData(this);location.href='mailto:'+S.email+'?subject='+encodeURIComponent('Free AI UI design request from '+d.get('n'))+'&body='+encodeURIComponent('Name: '+d.get('n')+'\nEmail: '+d.get('e')+'\nStore: '+(d.get('u')||'-')+'\n\n'+d.get('m'))};
+document.querySelectorAll('.shot[data-img]').forEach(loadShot);
 /* previews scroll up and down slowly; only run while visible */
 (function(){var sh=document.querySelectorAll('.shot');if(!('IntersectionObserver' in window)){sh.forEach(function(x){x.classList.add('play')});return}
 var io=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('play',e.isIntersecting)})},{threshold:.15});sh.forEach(function(x){io.observe(x)})})();
