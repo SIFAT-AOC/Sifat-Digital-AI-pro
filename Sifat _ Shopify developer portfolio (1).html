@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Sifat | Shopify developer for stores that convert</title>
-<meta name="description" content="Shopify store design and build with basic SEO included, plus branded product photos and videos. Get a free UI design for your homepage first.">
+<meta name="description" content="Shopify store design and build with clear fixed pricing. Dropshipping packages include basic SEO and product graphics. Get a free AI UI design for your homepage first.">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--g1:#95bf47;--g2:#5e8e3e;--g3:#008060;--ink:#0b2a22;--mut:#55665f;--line:#e4eee6;--tint:#f2f8ec;--grad:linear-gradient(135deg,#95bf47 0%,#5e8e3e 55%,#008060 100%)}
@@ -26,8 +26,9 @@ h1{font-size:clamp(34px,5vw,58px);line-height:1.08;letter-spacing:-1.2px;margin:
 .chk{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;font-weight:500}.chk span{display:flex;gap:7px;align-items:center}.chk .lucide{color:var(--g2);width:16px}
 .mock{position:relative}.frame{border-radius:18px;background:#fff;border:1px solid var(--line);overflow:hidden}.mock .frame{box-shadow:0 40px 70px -40px rgba(0,76,63,.55),0 0 0 8px rgba(255,255,255,.7)}
 .bar{height:32px;display:flex;align-items:center;gap:6px;padding:0 14px;background:#f6faf2;border-bottom:1px solid var(--line)}.bar i{width:9px;height:9px;border-radius:50%;background:#cfe0bd}.bar span{margin-left:10px;font-size:11px;color:var(--mut);background:#fff;border-radius:20px;padding:1px 14px;border:1px solid var(--line)}
-.shot{aspect-ratio:16/11;background-size:100% auto;background-position:50% 0;background-repeat:no-repeat;transition:background-position 6s ease-in-out}
-.mock:hover .shot,.work:hover .shot{background-position:50% 100%}
+.shot{aspect-ratio:16/11;background-size:100% auto;background-position:50% 0;background-repeat:no-repeat;animation:ss 28s ease-in-out infinite alternate;animation-play-state:paused}
+.shot.play{animation-play-state:running}
+@keyframes ss{0%,6%{background-position:50% 0}94%,100%{background-position:50% 100%}}
 .chip{position:absolute;display:flex;gap:9px;align-items:center;padding:9px 15px 9px 10px;border-radius:40px;background:#fff;border:1px solid var(--line);box-shadow:0 18px 30px -16px rgba(0,76,63,.5);font-size:12.5px;font-weight:600;animation:fl 5s ease-in-out infinite alternate}
 .chip i{width:26px;height:26px;border-radius:50%;background:var(--grad);display:grid;place-items:center;color:#fff}.chip .lucide{width:14px}.c1{left:-22px;bottom:50px}.c2{right:-10px;top:-18px;animation-delay:-2s}@keyframes fl{to{transform:translateY(-9px)}}
 .glass{background:linear-gradient(135deg,rgba(255,255,255,.92),rgba(242,248,236,.6));border:1px solid #fff;border-radius:24px;box-shadow:inset 1px 1px 0 #fff,0 0 0 .5px rgba(0,76,63,.08),0 16px 34px -16px rgba(0,76,63,.22);padding:22px;transition:.3s}.glass:hover{transform:translateY(-3px)}
@@ -52,6 +53,21 @@ section{padding:72px 0}.hd{text-align:center;max-width:640px;margin:0 auto 36px}
 .rb{position:absolute;right:12px;top:44px;z-index:2;padding:6px 14px;border-radius:30px;background:var(--grad);color:#fff;font-size:12px;font-weight:600;box-shadow:0 10px 20px -8px rgba(0,128,96,.7)}.fw{position:relative}
 .work h3{font-size:21px;margin:14px 6px 8px}.pf{display:grid;gap:8px;margin:0 6px 12px;font-size:13.5px}.pf div{display:flex;gap:9px;color:var(--mut)}.pf b{color:var(--ink);font-weight:600;min-width:62px}
 .tg{display:flex;gap:6px;flex-wrap:wrap;margin:auto 6px 0;align-items:center}.tg span{font-size:12px;padding:3px 11px;border-radius:30px;background:var(--tint);color:var(--g3);font-weight:500}.tg a{margin-left:auto;display:flex;gap:6px;align-items:center;font-size:13px;font-weight:600;color:var(--g3);min-height:40px}
+
+/* pricing */
+.pg{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;align-items:stretch}
+.pc{display:flex;flex-direction:column;gap:14px;padding:28px 22px 24px;position:relative}
+.pc.pop{border:2px solid var(--g2);box-shadow:0 30px 50px -26px rgba(0,128,96,.55)}
+.pb{position:absolute;top:-13px;left:50%;transform:translateX(-50%);padding:4px 14px;border-radius:30px;background:var(--grad);color:#fff;font-size:12px;font-weight:600;white-space:nowrap}
+.pn{font:600 18px 'Outfit'}.pd{font-size:13px;color:var(--mut);min-height:40px}
+.pp{font:700 46px/1 'Outfit';letter-spacing:-1.5px}.pp sup{font-size:22px;vertical-align:top;margin-right:2px;position:relative;top:6px}.pp small{font:500 13px 'Poppins';color:var(--mut);letter-spacing:0;margin-left:6px}
+.pc .pts{flex:1;margin:4px 0 6px}.pc .pts li{font-size:13.5px}.pts li.no{color:var(--mut)}.pts li.no .lucide{color:#b9c4be}
+.pc .btn{justify-content:space-between;width:100%}.pc .btn.o{justify-content:center}
+.pcu{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-top:22px;padding:22px 26px}.pcu b{font:600 18px 'Outfit';display:block}.pcu p{color:var(--mut);font-size:14px}.pnote{text-align:center;font-size:12.5px;color:var(--mut);margin-top:14px}
+/* education */
+.eg{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.ed{display:flex;gap:16px;align-items:flex-start}.ed .ic{flex:none}
+.ed h3{font-size:19px;line-height:1.25}.ed .sc{color:var(--g3);font-weight:600;font-size:14px;margin:2px 0 8px}.ed .yr{display:inline-block;padding:3px 12px;border-radius:30px;background:var(--tint);color:var(--g3);font-size:12px;font-weight:600;margin-bottom:8px}
+.ed .pts{margin-top:6px}.ed .pts li{font-size:14px}
 /* reviews */
 .rv{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.rv .glass{display:flex;flex-direction:column;gap:14px}.stars{color:#f5a524;letter-spacing:2px;font-size:16px}.rv p{font-size:15px}
 .who{display:flex;gap:12px;align-items:center;margin-top:auto}.who b{display:block;font:600 15px 'Outfit'}.who small{color:var(--mut);font-size:12.5px}
@@ -71,15 +87,15 @@ summary:after{content:"+";font-size:24px;color:var(--g2);transition:.3s}details[
 input,textarea{font:400 16px 'Poppins';padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:#fafcf8;width:100%;color:var(--ink)}input:focus,textarea:focus{border-color:var(--g2);background:#fff}textarea{min-height:100px;resize:vertical}.note{grid-column:1/-1;font-size:12px;color:var(--mut)}
 footer{text-align:center;padding:36px 18px 100px;font-size:13px;color:var(--mut)}
 .sb{display:none;position:fixed;left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:60}.sb .btn{width:100%;justify-content:space-between;padding-left:24px}
-@media(max-width:900px){.mb{display:grid}.hero,.pane,.ct{grid-template-columns:1fr}.hero{padding-top:110px}.st{grid-template-columns:1fr 1fr}.pr{grid-template-columns:1fr 1fr}.step:after{display:none}.cr{border-left:1px solid var(--line);border-top:0}.c1{left:6px}.c2{right:6px}.wg,.rv{grid-template-columns:1fr}.sk{grid-template-columns:repeat(3,1fr)}.hb .btn{display:none}.sb{display:block}
+@media(max-width:900px){.mb{display:grid}.hero,.pane,.ct{grid-template-columns:1fr}.hero{padding-top:110px}.st{grid-template-columns:1fr 1fr}.pr{grid-template-columns:1fr 1fr}.step:after{display:none}.cr{border-left:1px solid var(--line);border-top:0}.c1{left:6px}.c2{right:6px}.wg,.rv,.eg{grid-template-columns:1fr}.pg{grid-template-columns:1fr 1fr}.sk{grid-template-columns:repeat(3,1fr)}.hb .btn{display:none}.sb{display:block}
 nav{position:absolute;left:0;right:0;top:calc(100% + 8px);flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:24px;padding:10px;box-shadow:0 30px 50px -20px rgba(0,76,63,.4);opacity:0;visibility:hidden;transform:translateY(-8px);transition:.25s}header.open nav{opacity:1;visibility:visible;transform:none}nav a{padding:14px 18px;font-size:15px}}
-@media(max-width:560px){section{padding:50px 0}.pr{grid-template-columns:1fr}.pane{padding:22px}form{grid-template-columns:1fr}.cta .btn{width:100%;justify-content:space-between}.tabs{border-radius:24px;width:100%}.tab{padding:10px 14px;font-size:13px;flex:1}.cl,.cr{padding:26px 18px}.chip{display:none}}
+@media(max-width:560px){.pg{grid-template-columns:1fr}.pcu{padding:20px}.pcu .btn{width:100%;justify-content:space-between}section{padding:50px 0}.pr{grid-template-columns:1fr}.pane{padding:22px}form{grid-template-columns:1fr}.cta .btn{width:100%;justify-content:space-between}.tabs{border-radius:24px;width:100%}.tab{padding:10px 14px;font-size:13px;flex:1}.cl,.cr{padding:26px 18px}.chip{display:none}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style></head><body><div class="glow"></div><div id="demo"></div>
-<header id="hd"><div class="hb"><a class="logo" href="#top" id="logo"></a><nav id="nav"><a href="#skills">Skills</a><a href="#services">Services</a><a href="#work">Work</a><a href="#reviews">Reviews</a><a href="#process">Process</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
+<header id="hd"><div class="hb"><a class="logo" href="#top" id="logo"></a><nav id="nav"><a href="#skills">Skills</a><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#work">Work</a><a href="#education">Education</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
 <div class="hr"><a class="btn" href="#contact" id="hcta"></a><button class="mb" id="mb" aria-label="Menu" aria-expanded="false"><i data-lucide="menu"></i></button></div></div></header>
 <main id="top" class="w"><div class="hero" id="hero"></div><div class="st" id="stats"></div>
-<section id="skills"></section><section id="services"></section><section id="work"></section><section id="reviews"></section><section id="process"></section><section id="faq"></section><section id="contact"></section></main>
+<section id="skills"></section><section id="services"></section><section id="pricing"></section><section id="work"></section><section id="education"></section><section id="reviews"></section><section id="process"></section><section id="faq"></section><section id="contact"></section></main>
 <footer id="foot"></footer><div class="sb"><a class="btn" href="#contact" id="sbc"></a></div>
 <script>/* ============================================================
    CONTENT.JS  -  Ei file-i tomar admin. Shudhu eta edit koro.
@@ -102,18 +118,18 @@ const SITE = {
   hero: {
     pill: "Shopify developer",
     headline: "Shopify stores that {convert,} with product visuals that sell.",
-    sub: "I’m Sifat. I build fast Shopify stores with basic SEO included, and create the branded product photos and videos that go on them. Send me your store and I’ll design your new homepage first, free.",
-    btn1: "Get my free UI design",
+    sub: "I’m Sifat. I build fast Shopify stores at clear, fixed prices. Dropshipping packages come with basic SEO and product graphics. Send me your store or idea and I’ll make a free AI UI design of your homepage first.",
+    btn1: "Get my free AI UI design",
     btn2: "See my work",
-    points: ["Free design before you pay", "Basic SEO in every build", "Store, photos and video from one person"],
+    points: ["Free AI UI design before you pay", "Fixed prices from $149", "SEO and graphics in Dropshipping packages"],
     showcase: 0               // hero te kon work (0 = prothom) dekhabe
   },
 
   /* Trust strip: real number thakle boshao (e.g. "50+" / "Stores built") */
   stats: [
-    { icon: "pen-tool", title: "Free UI design", text: "Homepage designed first" },
-    { icon: "search-check", title: "Basic SEO", text: "Included in every build" },
-    { icon: "camera", title: "Photos and video", text: "Branded, store-ready" },
+    { icon: "pen-tool", title: "Free AI UI design", text: "Homepage designed first" },
+    { icon: "search-check", title: "Basic SEO", text: "In Dropshipping packages" },
+    { icon: "camera", title: "Product graphics", text: "In Dropshipping packages" },
     { icon: "gauge", title: "CRO focused", text: "Every page leads to cart" }
   ],
 
@@ -142,13 +158,45 @@ const SITE = {
     items: [
       { tab: "Store design & build", icon: "layout-template", title: "Shopify store design and build",
         text: "A fast, mobile-first store where every page leads to one action: add to cart.",
-        points: ["Free UI design for your homepage first", "Product pages built to convert", "Theme sections you can edit without code", "Cart, checkout and app setup", "Migration from other platforms without lost pages"] },
-      { tab: "Basic SEO", icon: "search", title: "Basic SEO", tag: "Included in every build",
+        points: ["Free AI UI design for your homepage first", "Product pages built to convert", "Theme sections you can edit without code", "Cart, checkout and app setup", "Migration from other platforms without lost pages"] },
+      { tab: "Basic SEO", icon: "search", title: "Basic SEO", tag: "In Dropshipping packages",
         text: "Your store launches ready to be found on Google.",
         points: ["Page titles, meta descriptions and headings", "Image alt text and clean URLs", "Redirects, sitemap and Search Console setup", "Speed and Core Web Vitals tuning"] },
-      { tab: "Photos & videos", icon: "clapperboard", title: "Branded product photos and videos",
+      { tab: "Graphics", icon: "clapperboard", title: "Branded product graphics", tag: "In Dropshipping packages",
         text: "Visuals that look like your brand, not a stock catalogue.",
-        points: ["Product photos on clean and lifestyle backgrounds", "Short product videos for product pages and ads", "One consistent look across the catalogue", "Files sized to load fast on Shopify"] }
+        points: ["Product images on clean and lifestyle backgrounds", "Banners and visuals for your store pages", "One consistent look across the catalogue", "Files sized to load fast on Shopify"] }
+    ]
+  },
+
+  pricing: {
+    title: "Simple, fixed pricing",
+    text: "Pick a plan. The AI UI design of your homepage is free with every one.",
+    plans: [
+      { name: "Store development", price: "149", sub: "development only", desc: "You already have products and content. I build the store.",
+        points: ["4 pages", "Free AI UI design", "Theme setup and customization", "Mobile-first responsive layout", "Cart and checkout setup"],
+        no: ["Basic SEO", "Graphics"] },
+      { name: "Dropshipping starter", price: "249", sub: "1 product", desc: "A complete dropshipping store with your first product.",
+        points: ["1 product added", "4 pages", "Graphics for your product", "Basic SEO", "Free AI UI design", "Mobile-first, cart and checkout setup"] },
+      { name: "Dropshipping growth", price: "349", sub: "3 products", desc: "More products live on day one.", popular: "Most popular",
+        points: ["3 products added", "4 pages", "Graphics for your products", "Basic SEO", "Free AI UI design", "Mobile-first, cart and checkout setup"] },
+      { name: "Dropshipping pro", price: "449", sub: "5 products", desc: "A fuller catalogue, ready to sell.",
+        points: ["5 products added", "4 pages", "Graphics for your products", "Basic SEO", "Free AI UI design", "Mobile-first, cart and checkout setup"] }
+    ],
+    customTitle: "Need something custom?",
+    customText: "Different page count, more products or extra features? Send me a message with what you need and I will quote it.",
+    note: "Prices in USD. SEO and graphics are included in Dropshipping packages only."
+  },
+
+  education: {
+    title: "Education",
+    text: "The technical foundation behind my work.",
+    items: [
+      { icon: "graduation-cap", degree: "Diploma in Computer Science and Technology", school: "Brahmanbaria Polytechnic Institute", year: "2024",
+        points: ["Major in Computer Technology", "CGPA 3.27", "Class Representative, 2 times"] },
+      { icon: "book-open", degree: "Secondary School Certificate (SSC)", school: "Panchgoan High School",
+        points: ["Science background", "GPA 4.28"] },
+      { icon: "award", degree: "President’s Scout Award", school: "Bangladesh Scouts", year: "Oct 2020",
+        points: ["Awarded by Bangladesh Scouts"] }
     ]
   },
 
@@ -159,7 +207,7 @@ const SITE = {
       "title": "Aureve Skin Care",
       "type": "Store build",
       "url": "https://aureveskincare.com",
-      "img": "https://awesomescreenshot.s3.amazonaws.com/image/7797124/65228854-a05282c2712c22a7a8b996b3f0294bb5.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJSCJQ2NM3XLFPVKA%2F20261115%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261115T123123Z&X-Amz-Expires=28800&X-Amz-SignedHeaders=host&X-Amz-Signature=9fa3c2032e22aeb8b97555dd18470b090d44dabd05870ee0b9de11faa96decab",
+      "img": "assets/works/aureve-img.png",
       "problem": "Product page didn't explain the subscription benefits clearly.",
       "fix": "Rebuilt the product page around one clear, friction-free subscribe & save offer.",
       "result": "Load time dropped from 5s to 1.6s",
@@ -169,7 +217,7 @@ const SITE = {
       "title": "The Krush Effect",
       "type": "Beauty Brand",
       "url": "https://www.thekrusheffect.com/",
-      "img": "https://awesomescreenshot.s3.amazonaws.com/image/7797124/65229123-230822acd220d8aad31391c0242f43ca.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJSCJQ2NM3XLFPVKA%2F20261115%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261115T125525Z&X-Amz-Expires=28800&X-Amz-SignedHeaders=host&X-Amz-Signature=0be3b5eb0b2c051f6e75cfcc8e3d905433a817a61f4aa42fa8df23f89bb5460b",
+      "img": "assets/works/Krush-Effect.png",
       "problem": "High bounce rates due to cluttered layout and unclear value proposition.",
       "fix": "Streamlined visual hierarchy and highlighted key trust badges above the fold.",
       "result": "+24% conversion rate",
@@ -179,7 +227,7 @@ const SITE = {
       "title": "Yumore Beauty",
       "type": "Beauty Brand",
       "url": "https://www.yumorebeauty.com/",
-      "img": "https://awesomescreenshot.s3.amazonaws.com/image/7797124/65229474-24220ac9f3b2e6aeff6a85b9c654a3f7.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJSCJQ2NM3XLFPVKA%2F20261115%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261115T132821Z&X-Amz-Expires=28800&X-Amz-SignedHeaders=host&X-Amz-Signature=67326c15f153b766c140dc11eaefa5b5bfb831163820213734a50194769204c5",
+      "img": "assets/works/yumure-beauty.png",
       "problem": "Mobile checkout abandonment was high due to multi-step friction.",
       "fix": "Implemented a streamlined one-page checkout flow with express payment options.",
       "result": "+45% mobile checkouts",
@@ -189,7 +237,7 @@ const SITE = {
       "title": "Rosavia",
       "type": "Wellness Brand",
       "url": "https://tryrosavia.com/",
-      "img": "https://awesomescreenshot.s3.amazonaws.com/image/4960640/65228363-b7e75b7b04338db4f9d921e353e2f6a9.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJSCJQ2NM3XLFPVKA%2F20261115%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261115T114118Z&X-Amz-Expires=28800&X-Amz-SignedHeaders=host&X-Amz-Signature=195c7271ae3ce76624fccd69d07f81b0645bae5417ef7bd06e3fc816931f231a",
+      "img": "assets/works/Rosavia.png",
       "problem": "Ingredients and clinical benefits were buried too deep on the page.",
       "fix": "Designed custom iconography and structured ingredient breakdown sections.",
       "result": "+31% average order value",
@@ -199,7 +247,7 @@ const SITE = {
       "title": "Martha Premium Store",
       "type": "Store build",
       "url": "https://marthapremiumstore.com",
-      "img": "https://awesomescreenshot.s3.amazonaws.com/image/7797124/65228809-4ee68f9cac0c9b68898b3397b35242a9.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJSCJQ2NM3XLFPVKA%2F20261115%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261115T122726Z&X-Amz-Expires=28800&X-Amz-SignedHeaders=host&X-Amz-Signature=15ba8018c670d75e8a3bf17a54d78aa38f808a4dbc09353294963a0407c0f38a",
+      "img": "assets/works/Martha.png",
       "problem": "Visitors left the homepage without choosing a product.",
       "fix": "Introduced a quiz-led homepage that guides shoppers to the right product instantly.",
       "result": "2x add-to-cart rate",
@@ -209,7 +257,7 @@ const SITE = {
       "title": "Chim chamkw",
       "type": "Fashion Brand",
       "url": "https://chimchamkw.com/",
-      "img": "https://awesomescreenshot.s3.amazonaws.com/image/7797124/65228425-33901214406628173e0c87a5f7e2a6a6.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJSCJQ2NM3XLFPVKA%2F20261115%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261115T114739Z&X-Amz-Expires=28800&X-Amz-SignedHeaders=host&X-Amz-Signature=d49e48f76de31b1cc83009e815237474423392edbd5263a7209213318a121226",
+      "img": "assets/works/CHIM.CHAM.png",
       "problem": "Collection pages lacked robust filtering, making discovery difficult.",
       "fix": "Added intuitive tag and size filters with instant AJAX loading.",
       "result": "+28% category engagement",
@@ -219,7 +267,7 @@ const SITE = {
       "title": "Bloomin",
       "type": "Wellness Brand",
       "url": "https://trybloomin.com/",
-      "img": "https://awesomescreenshot.s3.amazonaws.com/image/4960640/65228525-7b13954f0df179895b28d3db15b2dd2a.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJSCJQ2NM3XLFPVKA%2F20261115%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261115T115856Z&X-Amz-Expires=28800&X-Amz-SignedHeaders=host&X-Amz-Signature=46ffc9adc693955d799bb22a3dbb0003b54cd8c4185176965ebdfb9935fb2331",
+      "img": "assets/works/Bloomin.png",
       "problem": "Slow page load times and lack of basic SEO structure.",
       "fix": "Cleaned up product grid code, compressed assets, and built SEO metadata from day one.",
       "result": "+38% subscription sales",
@@ -229,7 +277,7 @@ const SITE = {
       "title": "Goat Christmas",
       "type": "Fashion Brand",
       "url": "https://www.goatchristmas.com/",
-      "img": "https://awesomescreenshot.s3.amazonaws.com/image/7797124/65229049-f17a6d814a2a19eb1e68b4e67f8c0193.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJSCJQ2NM3XLFPVKA%2F20261115%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261115T124906Z&X-Amz-Expires=28800&X-Amz-SignedHeaders=host&X-Amz-Signature=9e87769bca564094af6de3b416c8cd5ea597022ad638e26653523dd4c7b5617b",
+      "img": "assets/works/CHRISTMAS.png",
       "problem": "Seasonal traffic spike caused site lag and poorly optimized landing layouts.",
       "fix": "Created a lightweight seasonal theme template optimized for festive holiday traffic.",
       "result": "+50% seasonal throughput",
@@ -239,7 +287,7 @@ const SITE = {
       "title": "Pretox Plus Shop",
       "type": "Beverage",
       "url": "https://pretoxplusshop.com/",
-      "img": "https://awesomescreenshot.s3.amazonaws.com/image/7797124/65229382-781e206ceae2be82ea3c168393a5c8dd.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJSCJQ2NM3XLFPVKA%2F20261115%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261115T131846Z&X-Amz-Expires=28800&X-Amz-SignedHeaders=host&X-Amz-Signature=4c4ca44fc4505eadc78c04c45e2f6140c07ce994131eb1fae779460d4152d182",
+      "img": "assets/works/Pretox+.png",
       "problem": "Unclear bundles and missing social proof on key landing pages.",
       "fix": "Added dynamic bundle builders and verified buyer reviews near the add-to-cart button.",
       "result": "+34% bundle conversion",
@@ -249,7 +297,7 @@ const SITE = {
       "title": "Xclusive Gear Clothing",
       "type": "Fashion Brand",
       "url": "https://xclusivegearclothing.com/",
-      "img": "https://awesomescreenshot.s3.amazonaws.com/image/7797124/65229333-b626d1d7e4fb60ab6c9c267b5abf910f.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJSCJQ2NM3XLFPVKA%2F20261115%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261115T131258Z&X-Amz-Expires=28800&X-Amz-SignedHeaders=host&X-Amz-Signature=bf8f2a7196c17e71f1e572c8a6caebb5ce65d7b7f74f8c7a60870eed1b0af322",
+      "img": "assets/works/Xclusive.png",
       "problem": "High return rates due to inaccurate sizing charts and poor image zooms.",
       "fix": "Integrated interactive size guides and high-definition zoom previews.",
       "result": "-15% return rate",
@@ -259,7 +307,7 @@ const SITE = {
       "title": "Moving Life",
       "type": "SEO & speed",
       "url": "https://us.movinglife.com/",
-      "img": "https://awesomescreenshot.s3.amazonaws.com/image/4960640/65228552-c7e4e82952a2c0b306c13abc7bc0276b.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJSCJQ2NM3XLFPVKA%2F20261115%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261115T120144Z&X-Amz-Expires=28800&X-Amz-SignedHeaders=host&X-Amz-Signature=7e4070d5d5d9b55c50467fa700f0bc064280494dcb4fec5c12fee58aa443a648",
+      "img": "assets/works/Movinglife.png",
       "problem": "Needed to migrate platforms without risking valuable search rankings.",
       "fix": "Mapped meticulous 301 redirects and optimized information architecture before launch.",
       "result": "0 pages lost during migration",
@@ -269,7 +317,7 @@ const SITE = {
       "title": "Vital Bee Honey",
       "type": "Store Build",
       "url": "https://www.vitalbeehoney.com/",
-      "img": "https://awesomescreenshot.s3.amazonaws.com/image/7797124/65229291-880541596f6cab718b685588cc33cf9f.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJSCJQ2NM3XLFPVKA%2F20261115%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261115T130832Z&X-Amz-Expires=28800&X-Amz-SignedHeaders=host&X-Amz-Signature=8eec038b0e2167c935deae5b70e69f17a7483fee5f5ce0dfa2556a51eb1ee7f0",
+      "img": "assets/works/VitalB.png",
       "problem": "Brand storytelling lacked visual depth, failing to convey organic quality.",
       "fix": "Crafted a bespoke custom design layout focusing on rich imagery and brand heritage.",
       "result": "+42% time on site",
@@ -279,7 +327,7 @@ const SITE = {
       "title": "wagan",
       "type": "Store build",
       "url": "https://wagan.com/",
-      "img": "https://awesomescreenshot.s3.amazonaws.com/image/7797124/65228752-761288d93fff973a5a817ee26c956f2f.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJSCJQ2NM3XLFPVKA%2F20261115%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261115T122217Z&X-Amz-Expires=28800&X-Amz-SignedHeaders=host&X-Amz-Signature=dd5211b5453107b558cab057dda65c1e22124173f302980e8d052be16d94616f",
+      "img": "assets/works/Wagan.png",
       "problem": "Legacy layout struggled with a vast catalog of technical products.",
       "fix": "Implemented an advanced mega-menu navigation and faceted search system.",
       "result": "+26% search conversion rate",
@@ -289,7 +337,7 @@ const SITE = {
       "title": "18 Gears",
       "type": "Store build",
       "url": "https://18-gears-6sjy1wdn.myshopify.com/",
-      "img": "https://awesomescreenshot.s3.amazonaws.com/image/7797124/65229454-188390dcb8a727c083be0f1fa41b2411.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJSCJQ2NM3XLFPVKA%2F20261115%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261115T132553Z&X-Amz-Expires=28800&X-Amz-SignedHeaders=host&X-Amz-Signature=a1bfc8f1c8023be691924114bc7081e6a7e7de555194635692aa85ade979ef45",
+      "img": "assets/works/18GEARS.png",
       "problem": "Needed a modern store architecture to handle fast scaling inventory.",
       "fix": "Built a modular Shopify store with clean Liquid templates and seamless backend integration.",
       "result": "Streamlined store management",
@@ -299,7 +347,7 @@ const SITE = {
       "title": "zayridh",
       "type": "Fashion Brand",
       "url": "https://zayridh.com/",
-      "img": "https://awesomescreenshot.s3.amazonaws.com/image/7797124/65229234-12c5cf8b57a926aceecb6a476d511313.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJSCJQ2NM3XLFPVKA%2F20261115%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261115T130414Z&X-Amz-Expires=28800&X-Amz-SignedHeaders=host&X-Amz-Signature=39b874cb954c098d6a0addd832dabbb0352493c3671f3d774f55d31f4604af60",
+      "img": "assets/works/Zayridh.png",
       "problem": "Low conversion rates from social media traffic campaigns.",
       "fix": "Optimized mobile landing pages with urgent trust elements and cleaner checkout funnels.",
       "result": "+35% ROI on social traffic",
@@ -316,22 +364,23 @@ const SITE = {
   ],
 
   process: [
-    { icon: "pen-tool", title: "Free UI design", text: "Send your store link. I design a new homepage built to convert." },
+    { icon: "pen-tool", title: "Free AI UI design", text: "Send your store link or idea. I design a new homepage built to convert." },
     { icon: "message-square-text", title: "Review and approve", text: "Tell me what to change. No pressure." },
-    { icon: "rocket", title: "Build and launch", text: "Built on Shopify, mobile-first, with basic SEO. Visuals made alongside." },
+    { icon: "rocket", title: "Build and launch", text: "Built on Shopify and mobile-first. Dropshipping packages also get basic SEO and graphics." },
     { icon: "line-chart", title: "Improve", text: "I watch how visitors behave and keep improving results." }
   ],
 
   faq: [
-    { q: "What is the free UI design?", a: "A custom homepage design based on your brand and offer, made to guide visitors to buy. You review it before any paid work starts." },
-    { q: "Do you do SEO?", a: "Basic SEO is included in every build: titles, meta descriptions, headings, alt text, redirects, sitemap and Search Console. For an ongoing SEO campaign I can point you to a specialist." },
-    { q: "How do the photos and videos work?", a: "We agree on your brand look first. Then I plan the shots, create photos and short videos, and deliver files sized to load fast." },
+    { q: "What is the free AI UI design?", a: "A custom homepage design, made with AI and polished by me, based on your brand and offer. It is the only free part. You review it before any paid work starts." },
+    { q: "Do you do SEO?", a: "Basic SEO comes with the Dropshipping packages: titles, meta descriptions, headings, alt text, redirects, sitemap and Search Console. It is not part of the development-only plan. Message me if you want it added, or for an ongoing SEO campaign." },
+    { q: "How do the graphics work?", a: "Graphics are included in the Dropshipping packages. We agree on your brand look first, then I create the product graphics and deliver files sized to load fast." },
+    { q: "How is pricing decided?", a: "Fixed prices, listed in the Pricing section. Development only is $149. Dropshipping packages start at $249 for 1 product and go up with the number of products. For anything custom, message me and I will quote it." },
     { q: "Do you only work with Shopify?", a: "Yes. Your store, SEO setup and product visuals all fit together." },
     { q: "Will I lose pages or traffic if I redesign?", a: "No. I plan page structure and redirects first so what already works keeps working." }
   ],
 
   contact: {
-    title: "Get your free UI design",
+    title: "Get your free AI UI design",
     text: "Tell me about your store and I’ll reply with a plan. Your store link is optional. Hiring? I’m open to full-time and contract roles.",
     reply: "I reply within 24 hours."
   }
@@ -344,27 +393,31 @@ var cta=function(t){return t+'<i>'+ic('arrow-right')+'</i>'};
 function av(p,n){return '<span class="av">'+(p?'<img src="'+p+'" alt="'+n+'" loading="lazy">':'<span>'+n.trim().split(/\s+/).map(function(x){return x[0]}).slice(0,2).join('').toUpperCase()+'</span>')+'</span>'}
 function hd(p,t,x){return '<div class="w" style="padding:0"><div class="hd"><span class="pill">'+p+'</span><h2>'+t+'</h2>'+(x?'<p>'+x+'</p>':'')+'</div>'}
 if(S.demoMode)$('demo').innerHTML='<div class="demo">Demo content. Replace it with real work and reviews in content.js</div>';
-$('logo').innerHTML='<b>'+ic('shopping-bag')+'</b>'+S.name;$('hcta').innerHTML=cta('Free UI design');$('sbc').innerHTML=cta(S.hero.btn1);
+$('logo').innerHTML='<b>'+ic('shopping-bag')+'</b>'+S.name;$('hcta').innerHTML=cta('Free AI UI design');$('sbc').innerHTML=cta(S.hero.btn1);
 var H=S.hero,w0=S.works[H.showcase]||S.works[0];
 $('hero').innerHTML='<div><span class="pill">'+H.pill+'</span><h1>'+H.headline.replace(/\{(.+?)\}/,'<span class="gt">$1</span>')+'</h1><p class="lead">'+H.sub+'</p><div class="cta"><a class="btn" href="#contact">'+cta(H.btn1)+'</a><a class="btn o" href="#work">'+H.btn2+'</a></div><div class="chk">'+H.points.map(function(p){return '<span>'+ic('check-circle-2')+p+'</span>'}).join('')+'</div></div>'+
 (w0?'<div class="mock"><div class="frame"><div class="bar"><i></i><i></i><i></i><span>yourstore.myshopify.com</span></div><div class="shot" style="background-image:url('+w0.img+')"></div></div><span class="chip c1"><i>'+ic('trending-up')+'</i>Built to lift add-to-cart</span><span class="chip c2"><i>'+ic('zap')+'</i>Fast on mobile</span></div>':'');
 $('stats').innerHTML=S.stats.map(function(s){return '<div class="glass"><span class="ic">'+ic(s.icon)+'</span><b>'+s.title+'</b><span>'+s.text+'</span></div>'}).join('');
 var K=S.skills;$('skills').innerHTML=hd('Skillset',K.title,K.text)+'<div class="sk">'+K.items.map(function(k){return '<div class="glass"><span class="si"><img src="https://cdn.simpleicons.org/'+k.slug+'/'+k.color+'" alt="" loading="lazy" onerror="this.outerHTML=\'<b>'+k.name[0]+'</b>\'"></span>'+k.name+'</div>'}).join('')+'</div></div>';
 var V=S.services;$('services').innerHTML=hd('Services',V.title,V.text)+'<div class="tabs" role="tablist">'+V.items.map(function(s,i){return '<button class="tab'+(i?'':' on')+'" role="tab">'+s.tab+'</button>'}).join('')+'</div>'+V.items.map(function(s,i){return '<div class="glass pane'+(i?'':' on')+'"><div>'+(s.tag?'<span class="tag">'+s.tag+'</span>':'')+'<h3>'+s.title+'</h3><p>'+s.text+'</p><ul class="pts">'+s.points.map(function(p){return '<li>'+ic('check')+p+'</li>'}).join('')+'</ul></div><div class="vis">'+ic(s.icon)+'</div></div>'}).join('')+'</div>';
+var P=S.pricing,wl=function(t){return S.whatsapp?'https://wa.me/'+S.whatsapp+'?text='+encodeURIComponent(t):'#contact'};
+$('pricing').innerHTML=hd('Pricing',P.title,P.text)+'<div class="pg">'+P.plans.map(function(p){return '<div class="glass pc'+(p.popular?' pop':'')+'">'+(p.popular?'<span class="pb">'+p.popular+'</span>':'')+'<div class="pn">'+p.name+'</div><div class="pp"><sup>$</sup>'+p.price+'<small>'+p.sub+'</small></div><p class="pd">'+p.desc+'</p><ul class="pts">'+p.points.map(function(x){return '<li>'+ic('check')+x+'</li>'}).join('')+(p.no||[]).map(function(x){return '<li class="no">'+ic('x')+x+' not included</li>'}).join('')+'</ul><a class="btn'+(p.popular?'':' o')+'" href="'+wl('Hi Sifat, I am interested in the '+p.name+' plan ($'+p.price+').')+'" target="_blank" rel="noopener">'+(p.popular?cta('Choose this plan'):'Choose this plan')+'</a></div>'}).join('')+'</div><div class="glass pcu"><div><b>'+P.customTitle+'</b><p>'+P.customText+'</p></div><a class="btn" href="'+wl('Hi Sifat, I need a custom Shopify project.')+'" target="_blank" rel="noopener">'+cta('Message me')+'</a></div><p class="pnote">'+P.note+'</p></div>';
+var E=S.education;$('education').innerHTML=hd('Education',E.title,E.text)+'<div class="eg">'+E.items.map(function(e){return '<div class="glass ed"><span class="ic">'+ic(e.icon)+'</span><div>'+(e.year?'<span class="yr">'+e.year+'</span>':'')+'<h3>'+e.degree+'</h3><div class="sc">'+e.school+'</div><ul class="pts">'+e.points.map(function(x){return '<li>'+ic('check')+x+'</li>'}).join('')+'</ul></div></div>'}).join('')+'</div></div>';
 var ty=['All'];S.works.forEach(function(w){if(ty.indexOf(w.type)<0)ty.push(w.type)});
-$('work').innerHTML=hd('Work','Stores I have <span class="gt">built</span>','Hover a preview to scroll it. Each card shows the problem, the fix and the result.')+'<div class="flt">'+ty.map(function(t,i){return '<button class="'+(i?'':'on')+'">'+t+'</button>'}).join('')+'</div><div class="wg">'+S.works.map(function(w){return '<div class="glass work" data-t="'+w.type+'"><div class="frame fw"><span class="rb">'+w.result+'</span><div class="bar"><i></i><i></i><i></i></div><div class="shot" style="background-image:url('+w.img+')"></div></div><h3>'+w.title+'</h3><div class="pf"><div><b>Problem</b>'+w.problem+'</div><div><b>Fix</b>'+w.fix+'</div></div><div class="tg">'+w.tags.map(function(t){return '<span>'+t+'</span>'}).join('')+'<a href="'+w.url+'" target="_blank" rel="noopener">View live '+ic('arrow-up-right')+'</a></div></div>'}).join('')+'</div></div>';
+$('work').innerHTML=hd('Work','Stores I have <span class="gt">built</span>','Each preview scrolls slowly on its own. Every card shows the problem, the fix and the result.')+'<div class="flt">'+ty.map(function(t,i){return '<button class="'+(i?'':'on')+'">'+t+'</button>'}).join('')+'</div><div class="wg">'+S.works.map(function(w){return '<div class="glass work" data-t="'+w.type+'"><div class="frame fw"><span class="rb">'+w.result+'</span><div class="bar"><i></i><i></i><i></i></div><div class="shot" style="background-image:url('+w.img+')"></div></div><h3>'+w.title+'</h3><div class="pf"><div><b>Problem</b>'+w.problem+'</div><div><b>Fix</b>'+w.fix+'</div></div><div class="tg">'+w.tags.map(function(t){return '<span>'+t+'</span>'}).join('')+'<a href="'+w.url+'" target="_blank" rel="noopener">View live '+ic('arrow-up-right')+'</a></div></div>'}).join('')+'</div></div>';
 if(S.reviews.length)$('reviews').innerHTML=hd('Reviews','What clients <span class="gt">say</span>','')+'<div class="rv">'+S.reviews.map(function(r){return '<div class="glass"><div class="stars" aria-label="'+r.stars+' stars">'+'★'.repeat(r.stars)+'</div><p>“'+r.quote+'”</p><div class="who">'+av(r.photo,r.name)+'<div><b>'+r.name+'</b><small>'+r.role+'</small></div></div></div>'}).join('')+'</div></div>';else $('reviews').remove();
 $('process').innerHTML=hd('Process','How it <span class="gt">works</span>','')+'<div class="pr">'+S.process.map(function(p,i){return '<div class="glass step"><span class="n">'+(i+1)+'</span><span class="ic">'+ic(p.icon)+'</span><h3>'+p.title+'</h3><p>'+p.text+'</p></div>'}).join('')+'</div></div>';
 $('faq').innerHTML=hd('FAQ','Questions','')+'<div class="faq">'+S.faq.map(function(f,i){return '<details class="glass"'+(i?'':' open')+'><summary>'+f.q+'</summary><p>'+f.a+'</p></details>'}).join('')+'</div></div>';
 var C=S.contact,wa=S.whatsapp?'<a class="row" href="https://wa.me/'+S.whatsapp+'" target="_blank" rel="noopener">'+ic('message-circle')+'WhatsApp</a>':'';
-$('contact').innerHTML='<div class="ct"><div class="cl"><div class="id">'+av(S.photo,S.name)+'<div><b>'+S.name+'</b><small>'+S.role+'</small><span class="on2">'+S.availability+'</span></div></div><h2>'+C.title+'</h2><p>'+C.text+'</p>'+wa+'<a class="row" href="mailto:'+S.email+'">'+ic('mail')+S.email+'</a><a class="row" href="'+S.linkedin+'" target="_blank" rel="noopener">'+ic('linkedin')+'LinkedIn</a></div><div class="cr"><form id="f"><label class="f">Name<input name="n" required autocomplete="name"></label><label class="f">Email<input name="e" type="email" required autocomplete="email"></label><label class="f full">Store link (optional)<input name="u" placeholder="yourstore.com"></label><label class="f full">What do you need?<textarea name="m" placeholder="Store build, SEO, product photos or videos..."></textarea></label><div class="full"><button class="btn" type="submit">'+cta(S.hero.btn1)+'</button></div><p class="note">'+C.reply+' This opens your email app with the message ready to send.</p></form></div></div>';
+$('contact').innerHTML='<div class="ct"><div class="cl"><div class="id">'+av(S.photo,S.name)+'<div><b>'+S.name+'</b><small>'+S.role+'</small><span class="on2">'+S.availability+'</span></div></div><h2>'+C.title+'</h2><p>'+C.text+'</p>'+wa+'<a class="row" href="mailto:'+S.email+'">'+ic('mail')+S.email+'</a><a class="row" href="'+S.linkedin+'" target="_blank" rel="noopener">'+ic('linkedin')+'LinkedIn</a></div><div class="cr"><form id="f"><label class="f">Name<input name="n" required autocomplete="name"></label><label class="f">Email<input name="e" type="email" required autocomplete="email"></label><label class="f full">Store link (optional)<input name="u" placeholder="yourstore.com"></label><label class="f full">What do you need?<textarea name="m" placeholder="Which plan, your store idea, or a custom request..."></textarea></label><div class="full"><button class="btn" type="submit">'+cta(S.hero.btn1)+'</button></div><p class="note">'+C.reply+' This opens your email app with the message ready to send.</p></form></div></div>';
 $('foot').textContent='© 2026 '+S.name+'. '+S.role+'.';
 try{lucide.createIcons()}catch(e){}
 document.querySelectorAll('.tab').forEach(function(b,i,a){b.onclick=function(){a.forEach(function(x,j){x.classList.toggle('on',i==j);document.querySelectorAll('.pane')[j].classList.toggle('on',i==j)})}});
 document.querySelectorAll('.flt button').forEach(function(b,i,a){b.onclick=function(){a.forEach(function(x){x.classList.toggle('on',x==b)});document.querySelectorAll('.work').forEach(function(w){w.classList.toggle('hid',i&&w.dataset.t!=b.textContent)})}});
 var hh=$('hd');$('mb').onclick=function(){var o=hh.classList.toggle('open');this.setAttribute('aria-expanded',o);this.innerHTML=ic(o?'x':'menu');try{lucide.createIcons()}catch(e){}};
 $('nav').onclick=function(){hh.classList.remove('open')};
-$('f').onsubmit=function(e){e.preventDefault();var d=new FormData(this);location.href='mailto:'+S.email+'?subject='+encodeURIComponent('Free UI design request from '+d.get('n'))+'&body='+encodeURIComponent('Name: '+d.get('n')+'\nEmail: '+d.get('e')+'\nStore: '+(d.get('u')||'-')+'\n\n'+d.get('m'))};
-/* touch devices: auto-scroll previews when visible */
-if(matchMedia('(hover:none)').matches&&'IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){var s=e.target.querySelector('.shot');if(s)s.style.backgroundPosition=e.isIntersecting?'50% 100%':'50% 0'})},{threshold:.6});document.querySelectorAll('.work,.mock').forEach(function(x){io.observe(x)})}
+$('f').onsubmit=function(e){e.preventDefault();var d=new FormData(this);location.href='mailto:'+S.email+'?subject='+encodeURIComponent('Free AI UI design request from '+d.get('n'))+'&body='+encodeURIComponent('Name: '+d.get('n')+'\nEmail: '+d.get('e')+'\nStore: '+(d.get('u')||'-')+'\n\n'+d.get('m'))};
+/* previews scroll up and down slowly; only run while visible */
+(function(){var sh=document.querySelectorAll('.shot');if(!('IntersectionObserver' in window)){sh.forEach(function(x){x.classList.add('play')});return}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('play',e.isIntersecting)})},{threshold:.15});sh.forEach(function(x){io.observe(x)})})();
 </script></body></html>
